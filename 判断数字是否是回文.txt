@@ -1,0 +1,18 @@
+//判断数字是否是回文：输入一个五位数，判断它是不是回文数字
+//制作人：谢建明
+#include<stdio.h>
+int main()
+{
+	int wan,qian,shi,ge,number;//定义变量，number是被判断的数字，wan是万分位的数千是千分位的数..... 
+	printf("输入被判断的数字\n");
+	scanf("%d",&number);//用户数入被判断的数字 
+	wan=number/10000;              //因为wan是整形，所以除以10000后得到万分位上的数 
+	qian=number%10000/1000;        //先通过除余，千分位及以后的数字，再通过除法得到千分位上的数 
+	shi=number%10000%1000%100/10;  //同上 
+	ge=number%10000%1000%100%10;
+	if(wan==ge&&qian==shi)//wan是否等于ge且qian是否等于shi 
+	{
+		printf("%d是回文数字",number); //是，则该数字是回文数 
+	}
+	else printf("%d不是回文数字",number);//不是，则该数字不是回文数 
+ } 
