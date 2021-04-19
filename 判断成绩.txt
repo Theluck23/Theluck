@@ -1,0 +1,42 @@
+/*created by panyue on 2021/2/19.
+ * 判断成绩
+ * 通过开关语句实现
+ * /
+#include<stdio.h>
+#include <stdlib.h>
+int GradeJudge(double Mygrade);     //定义函数：成绩判断
+int main(void)
+{
+	double grade;               //成绩还是可能会有小数
+	printf("plz input your grade:");
+	scanf_s("%lf", &grade);
+	switch (GradeJudge(grade))  //通过函数的返回值直接判断成绩等级
+	{
+	case 1:printf("优！\n"); break;
+	case 2:printf("良！\n"); break;
+	case 3:printf("中！\n"); break;
+	case 4:printf("差！\n"); break;
+	default:printf("输入有误！\n"); break;   //出错
+	}
+	system("pause");
+	return 0;
+}
+int GradeJudge(double Mygrade)
+{
+	if (Mygrade >= 90)
+	{
+		return 1;
+	}
+	else if(Mygrade>=80)
+	{
+		return 2;
+	}
+	else if (Mygrade >= 70)
+	{
+		return 3;
+	}
+	else
+	{
+		return 4;
+	}
+}
