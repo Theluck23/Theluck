@@ -1,0 +1,72 @@
+包括<stdio.h>
+#包括<math.h>
+
+INT Main()
+{
+
+INT a，b，d，选择；
+双x，x1，x2，p，m，n，o；
+C节；
+Printf(“四则运算输入1\n平方根输入2\n求倒数输入3\n求幂次方输入4\n求一元二次方程的解输入5”)；
+Scanf(“%d”，&select)；
+如果(选择=1)
+	{
+Printf(“请输入算式：\n”)；
+扫描量(“%d%c%d”，&a，&c，&b)；
+如果(c=‘+’)
+Printf(“%d%c%d=%d”，a，c，b，a+b)；
+如果(c=‘’-‘)
+Printf(“%d%c%d=%d”，a，c，b，a-b)；
+如果(c=‘*’)
+Printf(“%d%c%d=%d”，a，c，b，a*b)；
+如果(c=‘/’)
+Printf(“%d%c%d=%d”，a，c，b，a/b)；
+其他
+Printf(“这是错误！”)；
+	}
+如果(选择==2)
+	{
+Printf(“请输入要开方的数字：\n”)；
+扫描量(“%d”，&a)；
+Printf(“%d的平方根为%lf”，a，sqrt(A))；
+	}
+如果(选择==3)
+	{
+Printf(“请输入要求倒的数字：\n”)；
+扫描量(“%lf”，&x)；
+Printf(“%lf求倒数为%lf”，x，1/x)；
+	}
+如果(选择==4)
+	{
+Printf(“请输入底数：\n”)；
+扫描量(“%d”，&a)；
+Printf(“请输入指数：\n”)；
+扫描量(%d，&b)；
+D=a；
+对于(int i=1；i<b；i++)
+		{
+A=a*d；
+		}
+Printf(“%d的%d次为：%d\n”，d，b，a)；
+	}
+如果(选择==5)
+	{
+Printf(“输入一个一元二次方程(Ax^2+Bx+C=0)的系数A，B，C\n”)；
+扫描(“%lf%lf%lf”，&m，&n，&o)；
+P=n*n-4*m*o；
+如果(p<0)
+Printf(“此方程无解\n”)；
+其他
+		{
+X1=(-n+sqrt(P))/(2*m)；
+X2=(-n-sqrt(P))/(2*m)；
+如果(x1=x2)
+Printf(“此方程有唯一解：%lf\n”，x1)；
+其他
+Printf(“此方程有两解：%lf\t%lf\n”，x1，x2)；
+		}
+	}
+其他
+Printf(“这是错误！”)；
+返回0；
+}
